@@ -47,32 +47,32 @@ Update your Jenkins EC2 instance name tag:
 ```bash
 Jenkins-Ansible
 ```
-![](/Ansible-Configuration-Management-11/images/Rename.png)
+![](Ansible-Configuration-Management-11/images/Rename.png)
 ## Create GitHub Repository
 Create a repository:
 
 ```bash
 ansible-config-mgt
 ```
-![](/Ansible-Configuration-Management-11/images/git.png)
+![](Ansible-Configuration-Management-11/images/git.png)
 ## Install Ansible
 ```bash
 sudo apt update
 sudo apt install ansible -y
 ```
-![](/Ansible-Configuration-Management-11/images/update-ansible.png)
+![](Ansible-Configuration-Management-11/images/update-ansible.png)
 ## Verify Installation
 ```bash
 ansible --version
 ```
-![](/Ansible-Configuration-Management-11/images/version.png)
+![](Ansible-Configuration-Management-11/images/version.png)
 ## Configure Jenkins Freestyle Project
 Create a Jenkins job:
 
 ```bash
 ansible
 ```
-![](/Ansible-Configuration-Management-11/images/enkins-ansible.png)
+![](Ansible-Configuration-Management-11/images/enkins-ansible.png)
 
 Configure:
 
@@ -83,15 +83,15 @@ Configure:
 ```bash
 **
 ```
-![](/Ansible-Configuration-Management-11/images/webhook.png)
-![](/Ansible-Configuration-Management-11/images/post.png)
+![](Ansible-Configuration-Management-11/images/webhook.png)
+![](Ansible-Configuration-Management-11/images/post.png)
 
 Verify artifacts:
 
 ```bash
 ls /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/
 ```
-![](/Ansible-Configuration-Management-11/images/arch.png)
+![](Ansible-Configuration-Management-11/images/arch.png)
 ### Note
 Assign an Elastic IP to avoid updating webhooks whenever the server restarts.
 
@@ -116,7 +116,7 @@ Create a feature branch:
 ```bash
 git checkout -b pro11/feature
 ```
-![](/Ansible-Configuration-Management-11/images/branch.png)
+![](Ansible-Configuration-Management-11/images/branch.png)
 Create project structure:
 
 ```bash
@@ -186,7 +186,7 @@ ssh -A ubuntu@public-ip
 [lb]
 <LB-Private-IP> ansible_ssh_user=ubuntu
 ```
-![](/Ansible-Configuration-Management-11/images/inventory.png)
+![](Ansible-Configuration-Management-11/images/inventory.png)
 ---
 
 # Step 5 — Create Common Playbook
@@ -225,7 +225,7 @@ Add:
         name: wireshark
         state: latest
 ```
-![](/Ansible-Configuration-Management-11/images/playbook.png)
+![](Ansible-Configuration-Management-11/images/playbook.png)
 
 # Step 6 — Push Code to GitHub
 
@@ -267,7 +267,7 @@ Run playbook:
 ```bash
 ansible-playbook -i inventory/dev playbooks/common.yml
 ```
-![](/Ansible-Configuration-Management-11/images/install.png)
+![](Ansible-Configuration-Management-11/images/install.png)
 ---
 
 ## Verification
@@ -287,7 +287,7 @@ wireshark --version
 Expected result:
 
 - Wireshark installed successfully on all managed nodes.
-![](/Ansible-Configuration-Management-11/images/wireshark-v.png)
+![](Ansible-Configuration-Management-11/images/wireshark-v.png)
 ---
 
 
