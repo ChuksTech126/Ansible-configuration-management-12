@@ -47,7 +47,7 @@ Update your Jenkins EC2 instance name tag:
 ```bash
 Jenkins-Ansible
 ```
-![](Ansible-Configuration-Management-11/images/Rename.png)
+![](/images/Rename.png)
 ## Create GitHub Repository
 Create a repository:
 
