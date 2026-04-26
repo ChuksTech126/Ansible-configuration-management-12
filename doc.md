@@ -287,9 +287,9 @@ wireshark --version
 Expected result:
 
 - Wireshark installed successfully on all managed nodes.
-
----
 ![](/Ansible-Configuration-Management-11/images/wireshark-v.png)
+---
+
 
 ## Challenges Encountered
 - SSH key forwarding setup
@@ -301,11 +301,5 @@ Expected result:
 
 ## Project Outcome
 Successfully automated common server configuration tasks using **Ansible**, reducing manual administration effort and improving repeatability.
-
----
-
-## Author
-**Abraham Nwachukwu**  
-DevOps / Cloud Engineer
 
 ---
